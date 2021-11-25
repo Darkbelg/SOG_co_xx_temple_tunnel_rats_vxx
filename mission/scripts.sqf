@@ -102,13 +102,31 @@ if (isServer) then {
 	// systemChat format ["randomSelectedTunnel %1",randomSelectedTunnel];
 };
 
+playersInTunnel = false;
+
 [] spawn {
 	sleep 10;
-	if (alive trapN) then {
+	if (alive trapN) exitWith {
 		_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
-		_entry setPosATL getMarkerPos["tunnel_n"];
+		_entry setPosATL (getPosATL tunnel_n);
+		deleteVehicle tunnel_n;
+		deleteVehicle tunnel_w;
 		deleteVehicle animalsS;
-	} else {
-		deleteVehicle animalsN;
+		deleteVehicle animalsW;
+		true;
 	};
+	if ( alive trapW ) exitWith {
+		_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
+		_entry setPosATL (getPosATL tunnel_w);
+		deleteVehicle tunnel_n;
+		deleteVehicle tunnel_w;
+		deleteVehicle animalsS;
+		deleteVehicle animalsN;
+		true;
+	};
+	
+	deleteVehicle tunnel_n;
+	deleteVehicle tunnel_w;
+	deleteVehicle animalsN;
+	deleteVehicle animalsW;
 };

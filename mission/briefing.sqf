@@ -15,25 +15,25 @@ if (side group player != CIVILIAN) then {
 	// The code below creates the execution sub-section of notes.
 	_exe = player createDiaryRecord ["Diary", ["Mission",format["
 	<br/><font size='18' color='#80FF00'>OBJECTIVES</font>
-	<br/>We just got intel of a tunnel in the center of the ao.
+	<br/>We just got intel of a tunnel near a shrine/temple.
 	<br/>Go in and go look for intel inside the tunnels.
 	<br/>
 	<br/>%1 <!--- Casualties Cap --->
 	<br/>
 	<br/><font size='18' color='#80FF00'>FRIENDLY FORCES</font>
-	<br/>This mission is a emphasis on air support.
-	<br/>There is a jungle between these towns. Who knows what is hidden in there.
+	<br/>This mission is an emphasis on air support.
 	<br/>There is no resupply available so if you are running low on ammo you will have to pick up enemy weapons.
 	<br/>
 	<br/>All planes and helicopters have the option to change arnements with the aircraft master arm option.
 	<br/>
 	<br/><font size='18' color='#80FF00'>ENEMY FORCES</font>
-	<br/>Enemy has reinforced the position around the town. They are main VC forces.
+	<br/>Enemy is vc mixed with pavn 68 troops. Do to the steep terrain they won't be able to place down any static weapons to attack our air.
+	<br/>Do expect the enemy to have alternative ways to cover that.
 	<br/>
-	<br/>There are civilians inside the towns. So it is up to the commander if he wants to burn the town down or not.
+	<br/>There are civilians using the temples/shrines. So it is up to the commander if he wants to engage them.
 	<br/>No need to feel bad they are siding with the VC.
 	<br/>
-	<br/>Tunnels are generaly hidden with the poultry.
+	<br/>Tunnels are generaly hidden with the goats.
 	<br/>
 	<br/><font size='18' color='#80FF00'>CREDITS</font>
 	<br/>Created by <font color='#FF0080'>Darkbelg</font color>

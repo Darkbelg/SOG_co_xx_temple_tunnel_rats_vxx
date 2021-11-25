@@ -31,14 +31,14 @@ class f_param_weather
 	title = "Weather";
 	values[] = {0,1,2,3,4,5,6,7};
 	texts[] = {"Mission Default","Calm","Light Cloud","Overcast","Light Rain","Rain","Storm","Random"};
-	default = 7;
+	default = 1;
 };
 class f_param_fog
 {
 	title = "Fog";
 	values[] = {0,1,2,3,4};
 	texts[] = {"Mission Default","None","Light","Heavy","Random"};
-	default = 4;
+	default = 1;
 };
 class f_param_timeOfDay
 {

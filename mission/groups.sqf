@@ -22,5 +22,6 @@ _grpBLU = [
 	,["GrpBLU_TH1","Vector1","b_air","V1",_red]
 	,["GrpBLU_TH2","Vector2","b_air","V2",_blue]
 	,["GrpBLU_TH3","Vector3","b_air","V3",_green]
+	,["GrpBLU_TH5","Vector4","b_air","V4",_purple]
 	,["GrpBLU_TH4","Eagle","b_air","E",_orange]
 ];
