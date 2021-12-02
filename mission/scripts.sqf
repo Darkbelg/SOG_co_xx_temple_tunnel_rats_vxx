@@ -100,33 +100,42 @@ if (isServer) then {
 	// randomSelectedTunnel = selectRandom [1,2,3,4];
 	// publicVariable "randomSelectedTunnel";
 	// systemChat format ["randomSelectedTunnel %1",randomSelectedTunnel];
-};
+
+	
+	[] spawn {
+		sleep 10;
+		if (alive trapN) exitWith {
+			_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
+			_entry setPosATL (getPosATL tunnel_n);
+			deleteVehicle tunnel_n;
+			deleteVehicle tunnel_w;
+			deleteVehicle animalsS;
+			deleteVehicle animalsW;
+			true;
+		};
+		if ( alive trapW ) exitWith {
+			_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
+			_entry setPosATL (getPosATL tunnel_w);
+			deleteVehicle tunnel_n;
+			deleteVehicle tunnel_w;
+			deleteVehicle animalsS;
+			deleteVehicle animalsN;
+			true;
+		};
+		
+		deleteVehicle tunnel_n;
+		deleteVehicle tunnel_w;
+		deleteVehicle animalsN;
+		deleteVehicle animalsW;
+	};
 
 playersInTunnel = false;
-
-[] spawn {
-	sleep 10;
-	if (alive trapN) exitWith {
-		_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
-		_entry setPosATL (getPosATL tunnel_n);
-		deleteVehicle tunnel_n;
-		deleteVehicle tunnel_w;
-		deleteVehicle animalsS;
-		deleteVehicle animalsW;
-		true;
-	};
-	if ( alive trapW ) exitWith {
-		_entry = tunnel_s getVariable "vn_tunnel_trapdoor";
-		_entry setPosATL (getPosATL tunnel_w);
-		deleteVehicle tunnel_n;
-		deleteVehicle tunnel_w;
-		deleteVehicle animalsS;
-		deleteVehicle animalsN;
-		true;
-	};
-	
-	deleteVehicle tunnel_n;
-	deleteVehicle tunnel_w;
-	deleteVehicle animalsN;
-	deleteVehicle animalsW;
+playersInTunnelN = false;
+playersInTunnelW = false;
+playersInTunnelS = false;
+publicVariable "playersInTunnel";
+publicVariable "playersInTunnelN";
+publicVariable "playersInTunnelW";
+publicVariable "playersInTunnelS";
 };
+
