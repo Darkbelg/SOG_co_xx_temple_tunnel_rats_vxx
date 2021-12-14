@@ -20,16 +20,16 @@ while {alive _mortar && canFire _mortar} do {
 	// Fire rounds if we have targets.
 	if (count _targetArr > 0) then {
 	
-		_target = selectRandom _targetArr;
+		_targetPos = getPos (selectRandom _targetArr);
 	
-		_tempSmoke = "SmokeShellRed" createVehicle (_target getPos [random 5, random 360]); 
+		_tempSmoke = "SmokeShellRed" createVehicle ((_targetPos getPos [random 5, random 360]) vectorAdd [0,0,75]); 
 		
 		sleep 30;
 	
-		_dispersion = if (_mortar distance2D _target < 200) then {_closeDispersion} else {_maxDispersion};
+		_dispersion = if (_mortar distance2D _targetPos < 200) then {_closeDispersion} else {_maxDispersion};
 		
 		for "_i" from 0 to (6 + random 4) do {
-			_firePos = _target getPos [random _dispersion, random 360];
+			_firePos = _targetPos getPos [random _dispersion, random 360];
 			(effectiveCommander _mortar) commandArtilleryFire [_firePos, ((getArtilleryAmmo [vehicle _mortar])#0), 1];
 			sleep 5;
 		};

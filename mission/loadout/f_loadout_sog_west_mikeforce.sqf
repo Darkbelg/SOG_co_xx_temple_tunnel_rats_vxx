@@ -251,6 +251,8 @@ if (_isMan) then {
 	// Add items universal to all units of this faction
 
 	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	_unit addItem _firstaid;
+	_unit addItem _firstaid;
 	_unit linkItem "vn_b_item_map";		// Add and equip the map
 	_unit linkItem "ItemCompass";	// Add and equip a compass
 	_unit linkItem "vn_b_item_radio_urc10";		// Add and equip A3's default radio

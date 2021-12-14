@@ -20,6 +20,13 @@ if (side group player != CIVILIAN) then {
 	<br/>
 	<br/>%1 <!--- Casualties Cap --->
 	<br/>
+	<br/>Note:
+	<br/>Instant death is on meaning if the squad lead dies you need to pick up his radio and lead the squad.
+	<br/>Bleedout timer is now 45 seconds. Everyone has 2 extra first aid kits for stabilizing.
+	<br/>It is wave respawn 10 minutes.
+	<br/>Do provide feedback on the discord #mission-feedback even if you feel like nothing changed for you or you had a less enjoyable expierence or more.
+	<br/>The idea is to push these changes to all my missions where applicable and to share findings with the community.
+	<br/>
 	<br/><font size='18' color='#80FF00'>FRIENDLY FORCES</font>
 	<br/>This mission is an emphasis on air support.
 	<br/>There is no resupply available so if you are running low on ammo you will have to pick up enemy weapons.

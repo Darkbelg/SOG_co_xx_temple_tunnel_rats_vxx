@@ -1,7 +1,7 @@
 version=54;
 class EditorData
 {
-	moveGridStep=1;
+	moveGridStep=0.125;
 	angleGridStep=0.017453292;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=7320;
+		nextID=7399;
 	};
 	class MarkerIDProvider
 	{
-		nextID=288;
+		nextID=289;
 	};
 	class LayerIndexProvider
 	{
-		nextID=245;
+		nextID=277;
 	};
 	class Camera
 	{
-		pos[]={15745.845,163.62228,7189.1191};
-		dir[]={-0.49102902,-0.700436,0.51795745};
-		up[]={-0.48189309,0.7137152,0.50832045};
-		aside[]={0.72572005,1.4901161e-008,0.68799013};
+		pos[]={15744.286,42.803379,7027.4429};
+		dir[]={-0.11924808,-0.560718,0.81938618};
+		up[]={-0.080753349,0.82800901,0.55487812};
+		aside[]={0.98958659,-3.122841e-008,0.14401647};
 	};
 };
 binarizationWanted=0;
@@ -264,7 +264,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.5;
+								value=0.2;
 							};
 						};
 						class Item2
@@ -278,7 +278,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.30000001;
+								value=0.2;
 							};
 						};
 						class Item3
@@ -292,7 +292,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.80000001;
+								value=0.2;
 							};
 						};
 						class Item4
@@ -306,7 +306,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.5;
+								value=0.2;
 							};
 						};
 						class Item5
@@ -334,7 +334,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.30000001;
+								value=0.50334901;
 							};
 						};
 						class Item7
@@ -376,7 +376,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.5;
+								value=0.2;
 							};
 						};
 						class Item10
@@ -390,7 +390,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.30000001;
+								value=0.2;
 							};
 						};
 						class Item11
@@ -404,7 +404,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.80000001;
+								value=0.2;
 							};
 						};
 						class Item12
@@ -418,7 +418,7 @@ class CustomAttributes
 										"SCALAR"
 									};
 								};
-								value=0.5;
+								value=0.2;
 							};
 						};
 					};
@@ -569,7 +569,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=60;
+		items=75;
 		class Item0
 		{
 			dataType="Marker";
@@ -592,8 +592,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4963.7002,443.21036,13600.595};
-						angles[]={6.1499825,0.12217331,0.033983696};
+						position[]={4963.8008,443.29608,13601.686};
+						angles[]={0.012000273,0.12217331,6.1716509};
 					};
 					side="West";
 					flags=6;
@@ -4034,14 +4034,14 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6469.5889,162.65994,13605.881};
+				position[]={6493.4307,166.95172,13615.078};
 			};
 			areaSize[]={700,0,700};
 			areaIsRectangle=1;
 			flags=1;
 			id=6404;
 			type="vn_module_mission_tracker_ao";
-			atlOffset=102.75119;
+			atlOffset=104.56465;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4101,7 +4101,6 @@ class Mission
 			};
 			id=6669;
 			type="vn_b_air_ah1g_02_usmc";
-			atlOffset=-9.5367432e-007;
 		};
 		class Item36
 		{
@@ -16319,7 +16318,7 @@ class Mission
 					class Attributes
 					{
 						name="tr_tunnel_entered";
-						onActivation="playersInTunnel = true;" \n "if (alive trapN) then {" \n "playersInTunnelN = true; " \n "publicVariable ""playersInTunnelN"";" \n "};" \n "if (alive trapW) then {" \n "playersInTunnelW = true; " \n "publicVariable ""playersInTunnelW"";" \n "};" \n "if (alive trapS) then {" \n "playersInTunnelS = true; " \n "publicVariable ""playersInTunnelS"";" \n "};";
+						onActivation="playersInTunnel = true;" \n "if (alive trapN) then {" \n "playersInTunnelN = true; " \n "publicVariable ""playersInTunnelN"";" \n "};" \n "if (alive trapW) then {" \n "playersInTunnelW = true; " \n "publicVariable ""playersInTunnelW"";" \n "};" \n "if (alive trapS) then {" \n "playersInTunnelS = true; " \n "publicVariable ""playersInTunnelS"";" \n "};" \n "[tunnel_s getVariable ""vn_tunnel_trapdoor"",120,50,10] execVM ""scripts\qrfSpawn.sqf"";";
 						sizeC=40;
 						activationBy="ANYPLAYER";
 						isServerOnly=1;
@@ -19886,173 +19885,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6449.6289,44.942776,13634.302};
-				angles[]={0.2804046,0,0.23364723};
-			};
-			areaSize[]={1000,0,1000};
-			flags=1;
-			id=7315;
-			type="vn_module_mission_tracker_ao";
-			atlOffset=3.8146973e-006;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="vn_alert";
-					expression="_this setVariable ['VN_Alert',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="vn_runConditionCode";
-					expression="_this setVariable ['VN_RunConditionCode', compileFinal _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="playersInTunnel";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item58
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={15767.646,14.98,6939.397};
-			};
-			id=7317;
-			type="vn_modulehvtsimpleobjective_f";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="vn_modulehvtsimpleobjective_f_ImmediateDownload";
-					expression="_this setVariable ['ImmediateDownload',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="vn_modulehvtsimpleobjective_f_DownloadObject";
-					expression="_this setVariable ['DownloadObject',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="objNull";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="vn_modulehvtsimpleobjective_f_TaskDescription";
-					expression="_this setVariable ['TaskDescription',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="vn_modulehvtsimpleobjective_f_LinkedLayers";
-					expression="_this setVariable ['LinkedLayers',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[]";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="vn_modulehvtsimpleobjective_f_DownloadRadius";
-					expression="_this setVariable ['DownloadRadius',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=10;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item59
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
 				position[]={6777.7681,34.847286,13611.004};
-				angles[]={0.12140039,0,0.3402333};
+				angles[]={0.1214051,0,0.34023446};
 			};
 			id=7318;
 			type="vn_module_mission_tracker_reinforcements";
@@ -20080,16 +19914,291 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item58
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6050.377,124.25238,13527.938};
+			};
+			id=7352;
+			type="vn_module_water_fall";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_module_water_fall_water_lifetime";
+					expression="_this setVariable ['water_lifetime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="vn_module_water_fall_water_color_start";
+					expression="_this setVariable ['water_color_start',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[1,1,1,0.75]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="vn_module_water_fall_water_size";
+					expression="_this setVariable ['water_size',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="vn_module_water_fall_water_speed";
+					expression="_this setVariable ['water_speed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="vn_module_water_fall_water_color_end";
+					expression="_this setVariable ['water_color_end',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[1,1,1,0.1]";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="vn_module_water_fall_water_coeff";
+					expression="_this setVariable ['water_coeff',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10;
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item59
+		{
+			dataType="Marker";
+			position[]={6475.2549,67.255997,13516.499};
+			name="qrf_s_0";
+			type="Empty";
+			id=7372;
+			atlOffset=-14.957603;
+		};
+		class Item60
+		{
+			dataType="Marker";
+			position[]={6176.71,35.480999,13270.158};
+			name="qrf_s_1";
+			type="Empty";
+			id=7379;
+			atlOffset=-14.957977;
+		};
+		class Item61
+		{
+			dataType="Marker";
+			position[]={6271.687,23.961,12918.648};
+			name="qrf_s_2";
+			type="Empty";
+			id=7380;
+			atlOffset=-14.957167;
+		};
+		class Item62
+		{
+			dataType="Marker";
+			position[]={6673.1309,-5.2319999,12928.439};
+			name="qrf_s_3";
+			type="Empty";
+			id=7381;
+			atlOffset=-14.957552;
+		};
+		class Item63
+		{
+			dataType="Marker";
+			position[]={6752.4409,43.790001,13198.681};
+			name="qrf_s_4";
+			type="Empty";
+			id=7382;
+			atlOffset=-14.957531;
+		};
+		class Item64
+		{
+			dataType="Marker";
+			position[]={6459.8687,13.066406,14470.25};
+			name="qrf_n_0";
+			type="Empty";
+			id=7384;
+			atlOffset=-2.2790565;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={6247.4082,24.78524,14276.885};
+			name="qrf_n_1";
+			type="Empty";
+			id=7385;
+			atlOffset=-2.2790565;
+		};
+		class Item66
+		{
+			dataType="Marker";
+			position[]={6228.3032,125.53365,13997.26};
+			name="qrf_n_2";
+			type="Empty";
+			id=7386;
+			atlOffset=-2.2790527;
+		};
+		class Item67
+		{
+			dataType="Marker";
+			position[]={6443.6675,19.188486,13791.449};
+			name="qrf_n_3";
+			type="Empty";
+			id=7387;
+			atlOffset=-2.2790565;
+		};
+		class Item68
+		{
+			dataType="Marker";
+			position[]={6698.9775,13.219947,13830.527};
+			name="qrf_n_4";
+			type="Empty";
+			id=7388;
+			atlOffset=-2.2790565;
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={6064.105,56.962635,14158.575};
+			name="qrf_w_0";
+			type="Empty";
+			id=7389;
+		};
+		class Item70
+		{
+			dataType="Marker";
+			position[]={5755.1895,159.58772,13946.768};
+			name="qrf_w_1";
+			type="Empty";
+			id=7390;
+		};
+		class Item71
+		{
+			dataType="Marker";
+			position[]={5820.6567,134.82834,14146.252};
+			name="qrf_w_2";
+			type="Empty";
+			id=7391;
+		};
+		class Item72
+		{
+			dataType="Marker";
+			position[]={6192.585,134.29401,14035.152};
+			name="qrf_w_3";
+			type="Empty";
+			id=7392;
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={6256.2007,133.29414,13920.645};
+			name="qrf_w_4";
+			type="Empty";
+			id=7393;
+		};
+		class Item74
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15752.515,17.870193,7073.2832};
+				angles[]={-0,3.1764994,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear;";
+			};
+			id=7398;
+			type="vn_b_air_uh1c_03_01";
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=365;
+			nextID=366;
 		};
 		class Links
 		{
-			items=365;
+			items=366;
 			class Item0
 			{
 				linkID=0;
@@ -23735,6 +23844,16 @@ class Mission
 				linkID=364;
 				item0=7318;
 				item1=6404;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item365
+			{
+				linkID=365;
+				item0=7398;
+				item1=5792;
 				class CustomData
 				{
 					type="Sync";
